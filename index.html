@@ -3,59 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SleepGuard - Tu sueño, nuestra misión</title>
+    <title>SleepGuard</title>
     <style>
         body {
-            background-color: #121212;
-            color: #ffffff;
+            background-color: #000; /* Fondo negro */
+            color: #fff; /* Texto blanco */
             font-family: Arial, sans-serif;
             margin: 0;
-            padding: 0;
-        }
-        header {
+            height: 100vh; /* Altura total de la ventana */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar verticalmente */
+            align-items: center; /* Centrar horizontalmente */
             text-align: center;
-            padding: 20px;
         }
-        header img {
-            width: 150px;
+        .logo-container {
+            flex: 1; /* Ocupa todo el espacio disponible */
+            display: flex;
+            flex-direction: column;
+            justify-content: center; /* Centrar verticalmente */
+            align-items: center; /* Centrar horizontalmente */
+            padding: 20px; /* Espacio alrededor del contenido */
+        }
+        img {
+            width: 500px; /* Tamaño del logo más grande */
+            height: auto; /* Mantiene la proporción */
+            margin-bottom: 20px; /* Espacio debajo del logo */
         }
         h1 {
-            font-size: 2.5em;
-            margin-bottom: 0;
+            font-size: 5em; /* Tamaño del nombre más grande */
+            margin: 10px 0; /* Espaciado */
         }
-        p {
-            font-size: 1.2em;
-            color: #aaaaaa;
+        h2 {
+            font-size: 3em; /* Tamaño del eslogan más grande */
+            color: #aaaaaa; /* Color del eslogan */
+            margin: 10px 0; /* Espaciado */
         }
-        .content {
-            display: flex;
-            justify-content: center;
-            margin-top: 40px;
+        button {
+            padding: 25px 50px; /* Espacio interno del botón más grande */
+            font-size: 2.5em; /* Tamaño del texto del botón más grande */
+            background-color: #007bff; /* Color de fondo del botón */
+            color: white; /* Color del texto del botón */
+            border: none; /* Sin borde */
+            border-radius: 5px; /* Bordes redondeados */
+            cursor: pointer; /* Cambiar cursor al pasar */
+            transition: transform 0.2s ease; /* Animación */
+            margin-top: 20px; /* Espacio superior */
         }
-        .login-btn {
-            background-color: #1db954;
-            color: #ffffff;
-            padding: 15px 30px;
-            text-decoration: none;
-            font-size: 1.2em;
-            border-radius: 5px;
-        }
-        .login-btn:hover {
-            background-color: #17a347;
+        button:hover {
+            transform: scale(1.1); /* Efecto al pasar el cursor */
+            background-color: #0056b3; /* Color al pasar el cursor */
         }
     </style>
 </head>
 <body>
-
-    <header>
-        <img src="sleepguard_logo.png" alt="Logo SleepGuard">
+    <div class="logo-container">
+        <img src="sleepguard_logo.png" alt="SleepGuard Logo"> <!-- Asegúrate que el nombre del archivo es correcto -->
         <h1>SleepGuard</h1>
-        <p>Tu sueño, nuestra misión</p>
-    </header>
-
-    <div class="content">
-        <a href="login.html" class="login-btn">Inicio de Sesión</a>
+        <h2>Tu sueño, nuestra misión</h2>
+        <button onclick="location.href='login.html';">Inicio de Sesión</button>
     </div>
-
 </body>
 </html>
